@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+.logo img {
+  width: 600px;
+}
+
+.santa {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  width: 120px;
+  animation: rockSanta 2s infinite ease-in-out;
+}
+
+@keyframes rockSanta {
+  0%, 100% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+}
+
+.sleigh {
+  position: absolute;
+  bottom: 30px;
+  left: -150px;
+  width: 100px;
+  animation: moveSledge 8s linear infinite;
+}
+
+@keyframes moveSledge {
+  0% { left: -150px; }
+  100% { left: 110%; }
+}
+
+.dog {
+  position: absolute;
+  bottom: 10px;
+  left: 300px;
+  width: 80px;
+  animation: sleepDog 4s ease-in-out infinite;
+}
+
+@keyframes sleepDog {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 100px;
+  animation: blinkTree 1s infinite steps(2, start);
+}
+
+@keyframes blinkTree {
+  0%, 100% { filter: brightness(100%); }
+  50% { filter: brightness(150%); }
+}
+.snowflake {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
